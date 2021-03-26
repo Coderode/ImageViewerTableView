@@ -18,7 +18,6 @@ class ImageViewCell: UITableViewCell {
     }
     override func prepareForReuse() {
         super.prepareForReuse()
-        
     }
     func setData(imageUrl : String, label : String){
         self.activityIndicator.isHidden = false
@@ -26,6 +25,7 @@ class ImageViewCell: UITableViewCell {
             if result {
                 self.activityIndicator.isHidden = true
             }else{
+                self.activityIndicator.isHidden = true
                 self.authorNameLabel.text = "Failed to load data!"
                 self.leftImage.isHidden = true
             }

@@ -60,14 +60,10 @@ extension ImageViewerUIVCTableView : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = self.view.tableView.cellForRow(at: indexPath) as? ImageViewCell else { return }
         
-        let alert = UIAlertController(title: "\(cell.authorNameLabel.text!)", message: "", preferredStyle: .alert)
-        var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-        imageView.image = cell.leftImage.image
-        alert.view.addSubview(imageView)
-        alert.addAction(UIAlertAction(title: "Close", style: .destructive, handler: nil))
+        let showAlert = UIAlertController(title: "\(cell.authorNameLabel.text!)", message: nil, preferredStyle: .alert)
+        showAlert.showImage(image: cell.leftImage.image!)
         let vc = self.view as? UIViewController
-        vc?.present(alert, animated: true, completion: nil)
-        
+        vc?.present(showAlert, animated: true, completion: nil)
     }
 }
 extension ImageViewerUIVCTableView : PagingTableViewDelegate{

@@ -13,7 +13,7 @@ extension UIImageView {
         if let url = URL(string: urlString) {
             //checking in the file manager
             if let cachedImage = ImageViewerDataSource.shared.getImage(id: urlString ) {
-                self.image = cachedImage.imageWith(newSize: CGSize(width: 30, height: 30))
+                self.image = cachedImage.imageWith(newSize: CGSize(width: 200, height: 200))
                 handler?(true)
                 return nil
             }
@@ -23,7 +23,7 @@ extension UIImageView {
                 if let imageData = data {
                     if let downloadedimage = UIImage(data: imageData){
                         DispatchQueue.main.async {
-                            let image = downloadedimage.imageWith(newSize: CGSize(width: 30, height: 30))
+                            let image = downloadedimage.imageWith(newSize: CGSize(width: 200, height: 200))
                             self.image = image
                             handler?(true)
                         }

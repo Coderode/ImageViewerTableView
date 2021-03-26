@@ -26,8 +26,8 @@ class ImageViewerVC: UIViewController,ImageViewerView {
     }
     
     func loadMoreData(at page : Int) {
-        self.pageno = page
-        imageViewerVM.laodImages(pageno: page, limit: self.limit!)
+        self.pageno = page + 1
+        imageViewerVM.laodImages(pageno: self.pageno!, limit: self.limit!)
     }
     func didLoadData() {
         self.tableView.reloadData()

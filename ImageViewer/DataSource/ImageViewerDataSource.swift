@@ -41,7 +41,7 @@ class ImageViewerDataSource {
         let fileManager = FileManager.default
         let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(id.toBase64())
         //print(paths)
-        let imageData = image.jpegData(compressionQuality: 0.5)
+        let imageData = image.jpegData(compressionQuality: 1)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
     }
 }

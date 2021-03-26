@@ -24,6 +24,7 @@
 		2C8B006A260D170D00E3D7AA /* String+base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B0069260D170D00E3D7AA /* String+base.swift */; };
 		2C8B006D260D173200E3D7AA /* UIImageView+urlImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B006C260D173200E3D7AA /* UIImageView+urlImage.swift */; };
 		2C8B0072260D184A00E3D7AA /* ImageViewerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B0071260D184A00E3D7AA /* ImageViewerDataSource.swift */; };
+		2CA4BC87260DB61B002AB80D /* UIAlertController+Viewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA4BC86260DB61B002AB80D /* UIAlertController+Viewer.swift */; };
 		EDB1EBDDF994CC334DF4F907 /* Pods_ImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170436BFEC43809E1390B17A /* Pods_ImageViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		2C8B0069260D170D00E3D7AA /* String+base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+base.swift"; sourceTree = "<group>"; };
 		2C8B006C260D173200E3D7AA /* UIImageView+urlImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+urlImage.swift"; sourceTree = "<group>"; };
 		2C8B0071260D184A00E3D7AA /* ImageViewerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerDataSource.swift; sourceTree = "<group>"; };
+		2CA4BC86260DB61B002AB80D /* UIAlertController+Viewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Viewer.swift"; sourceTree = "<group>"; };
 		AE623267C85129719EFFC446 /* Pods-ImageViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.release.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.release.xcconfig"; sourceTree = "<group>"; };
 		BCCEC9E9A7CE35DACF192F0A /* Pods-ImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.debug.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +105,6 @@
 				2C8B003F260C636500E3D7AA /* CustomView */,
 				2C8B0032260C619A00E3D7AA /* StoryBoard */,
 				2C8B0031260C618D00E3D7AA /* ImageViewer */,
-				2C8B005B260CB45C00E3D7AA /* PaginatingTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +130,7 @@
 		2C8B003F260C636500E3D7AA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				2C8B005B260CB45C00E3D7AA /* PaginatingTableView.swift */,
 				2C8B0040260C639900E3D7AA /* ImageViewCell.swift */,
 				2C8B0041260C639900E3D7AA /* ImageViewCell.xib */,
 			);
@@ -183,6 +185,7 @@
 				2C8B005F260CC6B200E3D7AA /* UIImage+resize.swift */,
 				2C8B0069260D170D00E3D7AA /* String+base.swift */,
 				2C8B006C260D173200E3D7AA /* UIImageView+urlImage.swift */,
+				2CA4BC86260DB61B002AB80D /* UIAlertController+Viewer.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				2C8B003A260C623600E3D7AA /* ImageViewerUIVC.swift in Sources */,
 				2C8B005C260CB45C00E3D7AA /* PaginatingTableView.swift in Sources */,
 				2C8B004C260C6A8B00E3D7AA /* ImageViewerAPIProvider.swift in Sources */,
+				2CA4BC87260DB61B002AB80D /* UIAlertController+Viewer.swift in Sources */,
 				2C8B0072260D184A00E3D7AA /* ImageViewerDataSource.swift in Sources */,
 				2C8B004F260C6A9B00E3D7AA /* ImageViewerRestManager.swift in Sources */,
 				2C8B001D260C5DA500E3D7AA /* ImageViewerVC.swift in Sources */,
