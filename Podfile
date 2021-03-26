@@ -7,5 +7,5 @@ target 'ImageViewer' do
 
   # Pods for ImageViewer
   pod 'Moya', '~> 14.0'
-
+  pod 'Nuke'
 end

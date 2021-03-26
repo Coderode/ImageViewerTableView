@@ -6,23 +6,30 @@
 //
 
 import UIKit
-protocol ImageViewerView : class{
-    var tableView : UITableView! { get }
+protocol ImageViewerView : ImageViewerVMDataSource,ImageViewerUIVCDataSource,ImageViewerVMDelegate,ImageViewerUIVCDelegate{
+    var tableView : PagingTableView! { get }
     var viewerLabel : UILabel! { get }
 }
 
 class ImageViewerVC: UIViewController,ImageViewerView {
-    @IBOutlet weak var tableView : UITableView!
+   
+    
+    @IBOutlet weak var tableView : PagingTableView!
     @IBOutlet weak var viewerLabel : UILabel!
-    private var imageViewerUIVC : ImageViewerUIVC!
-    private var imageViewerVM : ImageViewerVM!
+    var imageViewerUIVC : ImageViewerUIVC!
+    var imageViewerVM : ImageViewerVM!
+    var pageno : Int? = 0
+    var limit : Int? = 12
+    var imageData: [ImageViewerResponseElement]? = [ImageViewerResponseElement]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageViewerUIVC = ImageViewerUIVC()
-        imageViewerUIVC.view = self
-        imageViewerUIVC.setUI()
-        imageViewerVM = ImageViewerVM()
-        imageViewerVM.view = self
+    }
+    
+    func loadMoreData(at page : Int) {
+        self.pageno = page
+        imageViewerVM.laodImages(pageno: page, limit: self.limit!)
+    }
+    func didLoadData() {
+        self.tableView.reloadData()
     }
 }
-
