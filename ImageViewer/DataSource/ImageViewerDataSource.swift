@@ -16,7 +16,7 @@ class ImageViewerDataSource {
         if !fileManager.fileExists(atPath: paths){
             try! fileManager.createDirectory(atPath: paths, withIntermediateDirectories: true, attributes: nil)
         }else{
-            print("Already dictionary created.")
+            //print("Already dictionary created.")
         }
     }
     func getImage(id: String)-> UIImage?{
@@ -24,9 +24,8 @@ class ImageViewerDataSource {
         let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent(id.toBase64())
         if fileManager.fileExists(atPath: imagePAth){
             return UIImage(contentsOfFile: imagePAth)
-            // self.imageView.image = UIImage(contentsOfFile: imagePAth)
         }else{
-            print("No Image")
+            //print("No Image")
             return nil
         }
     }
